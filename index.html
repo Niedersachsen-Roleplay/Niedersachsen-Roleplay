@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Niedersachsen Roleplay – Roblox-Roleplay in der Stadt Celle.">
+<meta name="theme-color" content="#111d31">
+<title>Niedersachsen Roleplay | Celle</title>
+<style>
+:root{--navy:#111d31;--navy2:#1b304c;--red:#d52e38;--ink:#1c293b;--muted:#66758a;--bg:#f3f5f8;--line:#e1e6ed;--white:#fff;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+.topline{height:4px;background:linear-gradient(90deg,var(--red) 0 20%,#e8edf3 20%)}header{position:sticky;top:0;z-index:20;background:#111d31f5;color:white;backdrop-filter:blur(12px);box-shadow:0 6px 25px #0b152533}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.04em;line-height:1.1}.brand img{width:46px;height:46px;object-fit:cover;border-radius:12px}.brand small{display:block;color:#b9c7d9;font-size:10px;letter-spacing:.18em;margin-top:5px}.links{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:700;color:#d9e2ed}.links a:hover{color:white}.nav-cta,.btn-red{background:var(--red);color:#fff}.nav-cta{padding:10px 15px;border-radius:9px}.menu-btn{display:none;background:none;color:#fff;border:1px solid #ffffff55;border-radius:9px;padding:8px 12px}
+.hero{background:radial-gradient(ellipse at 82% 18%,#35577b 0,transparent 37%),linear-gradient(115deg,#101c30,#1b304c 65%,#244362);color:white;padding:72px 0 76px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:45px}.eyebrow,.kicker{font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.eyebrow{color:#d7e3f0}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#f15b63;margin-right:8px}h1{font-size:clamp(42px,6vw,70px);line-height:1.03;letter-spacing:-.055em;margin:20px 0}.hero h1 span{color:#f16b70}.hero p{font-size:17px;color:#d1dceb;max-width:590px;margin:0 0 26px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-size:14px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-red{box-shadow:0 9px 25px #c9343d44}.btn-light{border:1px solid #ffffff55;color:white;background:#ffffff0d}.hero-logo{width:min(100%,430px);aspect-ratio:1/1;object-fit:cover;border-radius:25px;box-shadow:0 25px 65px #050d1c66;border:1px solid #ffffff38}
+.section{padding:72px 0}.white{background:white}.section-head{max-width:760px;margin-bottom:28px}.kicker{color:var(--red)}h2{font-size:clamp(30px,4vw,42px);line-height:1.12;letter-spacing:-.04em;margin:8px 0 12px;color:var(--navy)}.section-head p,.intro{color:var(--muted);margin:0}.split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.feature{background:linear-gradient(145deg,#142943,#284d72);color:white;border-radius:22px;padding:30px;min-height:260px;display:flex;flex-direction:column;justify-content:end}.feature .big{font-size:58px;font-weight:950;letter-spacing:-.07em;color:#ffffff25;line-height:1}.feature h3{font-size:25px;margin:17px 0 5px}.feature p{color:#d1dceb;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 7px 24px #14243a08}.card img{width:100%;height:205px;object-fit:cover;display:block;background:#dce2e9}.card-body{padding:17px 19px}.card h3{font-size:16px;color:var(--navy);margin:0 0 4px}.card p{font-size:13px;color:var(--muted);margin:0}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}.gallery img{width:100%;height:220px;display:block;object-fit:cover;background:#dce2e9}.gallery figcaption{padding:11px 14px;font-size:13px;font-weight:750;color:var(--navy)}
+.rules{display:grid;gap:10px;max-width:900px}.rule{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:17px 19px;border:1px solid var(--line);border-radius:13px;background:#fff}.rule-num{width:36px;height:36px;border-radius:10px;background:#fbe9ea;color:var(--red);display:grid;place-items:center;font-weight:900}.rule h3{font-size:16px;margin:0 0 3px;color:var(--navy)}.rule p{font-size:14px;color:var(--muted);margin:0}.closing{margin-top:20px;background:#fff;border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:17px 20px;font-weight:750;color:var(--navy)}
+.news{display:grid;grid-template-columns:1fr 1fr;gap:16px}.news article{background:#fff;border:1px solid var(--line);border-radius:15px;padding:21px}.news small{color:var(--red);font-weight:850;text-transform:uppercase;letter-spacing:.1em}.news h3{color:var(--navy);margin:7px 0}.news p{color:var(--muted);font-size:14px;margin:0}
+.faq{max-width:850px}details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:9px 0}summary{cursor:pointer;font-weight:750;color:var(--navy)}details p{color:var(--muted);font-size:14px;margin:10px 0 0}
+.contact{background:var(--navy);color:white;border-radius:22px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:22px}.contact h2{color:white}.contact p{color:#c8d5e4;max-width:570px;margin:0}footer{background:#0b1525;color:#aab8ca;padding:27px 0;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-row strong{color:#fff}
+@media(max-width:900px){.links{gap:12px}.links a{font-size:12px}.cards,.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{height:68px}.menu-btn{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy);padding:14px 20px 20px;flex-direction:column;align-items:stretch;gap:0}.links.open{display:flex}.links a{padding:10px 0;font-size:14px}.links .nav-cta{text-align:center;margin-top:8px}.hero{padding:55px 0}.hero-grid,.split{grid-template-columns:1fr}.hero-logo{max-width:300px;margin:auto}.section{padding:55px 0}.cards,.gallery,.news{grid-template-columns:1fr}.gallery img{height:230px}.contact{align-items:flex-start;flex-direction:column;padding:26px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="wrap nav">
+<a class="brand" href="#start"><img src="assets/niedersachsen-logo.png" alt="Niedersachsen Roleplay Logo"><span>NIEDERSACHSEN<small>ROLEPLAY · CELLE</small></span></a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false">☰ Menü</button>
+<nav class="links" id="navLinks">
+<a href="#ueber-uns">Über uns</a><a href="#spielwelt">Spielwelt</a><a href="#fahrzeuge">Fahrzeuge</a><a href="#regelwerk">Regelwerk</a><a href="#neuigkeiten">Neuigkeiten</a><a href="#faq">FAQ</a><a class="nav-cta" href="https://discord.gg/FNm3RCJeDu" target="_blank" rel="noopener">Discord beitreten ↗</a>
+</nav></div></header>
+<main>
+<section class="hero" id="start"><div class="wrap hero-grid"><div>
+<div class="eyebrow"><span class="dot"></span> Roblox Roleplay · Niedersachsen</div>
+<h1>Willkommen bei<br><span>Niedersachsen</span><br>Roleplay.</h1>
+<p>Erlebe eine Roleplay-Welt mit der Stadt Celle als Mittelpunkt. Entdecke unsere Spielwelt, Fahrzeuge und alles Wissenswerte rund um das Projekt.</p>
+<div class="actions"><a class="btn btn-red" href="https://discord.gg/FNm3RCJeDu" target="_blank" rel="noopener">Unser Discord ↗</a><a class="btn btn-light" href="#spielwelt">Spielwelt entdecken ↓</a></div>
+</div><img class="hero-logo" src="assets/niedersachsen-logo.png" alt="Niedersachsen Roleplay Wappen und Logo"></div></section>
+
+<section class="section white" id="ueber-uns"><div class="wrap split"><div><div class="kicker">Das Projekt</div><h2>Roleplay mit Bezug zu Celle.</h2>
+<p class="intro">Niedersachsen Roleplay ist ein Roblox-Projekt, dessen zentrale Spielwelt die Stadt Celle in Niedersachsen ist. Unser Ziel ist es, eine möglichst realistische und detailreiche Umgebung zu gestalten und eine freundliche Community aufzubauen.</p></div>
+<div class="feature"><div class="big">CELLE</div><h3>Eine Stadt. Viele Geschichten.</h3><p>Erkunde unsere virtuelle Spielwelt und erlebe unterschiedliche Alltagssituationen und Roleplay-Momente.</p></div></div></section>
+
+<section class="section" id="spielwelt"><div class="wrap"><div class="section-head"><div class="kicker">Unser Standort</div><h2>Die Spielwelt Celle</h2><p>Ein erster Einblick in die Gebäude und Bereiche, die in Niedersachsen Roleplay entstehen.</p></div>
+<div class="cards"><article class="card"><img src="assets/spielwelt-celle.jpg" alt="Gebäude und Gehweg in der Roblox-Spielwelt"><div class="card-body"><h3>Gebäude & Stadtbild</h3><p>Einblicke in die Gestaltung unserer virtuellen Stadt.</p></div></article>
+<article class="card"><img src="assets/fahrzeug-07.jpg" alt="Fahrzeug auf einer Straße in der Spielwelt"><div class="card-body"><h3>Straßen & Verkehr</h3><p>Fahrzeuge und Straßen gehören zum Alltag in der Spielwelt.</p></div></article>
+<article class="card"><img src="assets/fahrzeug-05.jpg" alt="Blaues Fahrzeug auf einer Straße"><div class="card-body"><h3>Unterwegs in Celle</h3><p>Entdecke die Umgebung und ihre verschiedenen Bereiche.</p></div></article></div></div></section>
+
+<section class="section white" id="fahrzeuge"><div class="wrap"><div class="section-head"><div class="kicker">Einblicke in den Fuhrpark</div><h2>Fahrzeuge</h2><p>Hier siehst du einige Fahrzeuge aus Niedersachsen Roleplay. Die Galerie wird mit neuen Fahrzeugen und Bildern erweitert.</p></div>
+<div class="gallery">
+<figure><img src="assets/fahrzeug-01.jpg" alt="Helles Geländefahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-02.jpg" alt="Weißes Sportcoupé"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-03.jpg" alt="Dunkler Pickup"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-04.jpg" alt="Graues Sportfahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-05.jpg" alt="Blaues Sportfahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-06.jpg" alt="Grünes Sportfahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-07.jpg" alt="Oranges Fahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-08.jpg" alt="Oranges Kompaktfahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+<figure><img src="assets/fahrzeug-09.jpg" alt="Graues Fahrzeug"><figcaption>Fahrzeug aus dem Fuhrpark</figcaption></figure>
+</div></div></section>
+
+<section class="section" id="regelwerk"><div class="wrap"><div class="section-head"><div class="kicker">Community</div><h2>Community-Regeln</h2><p>Für ein angenehmes Miteinander gelten in unserer Community folgende Regeln. Bitte lies sie aufmerksam durch.</p></div>
+<div class="rules">
+<article class="rule"><div class="rule-num">01</div><div><h3>Respektvoller Umgang</h3><p>Behandle alle Mitglieder respektvoll. Beleidigungen, Mobbing, Diskriminierung und persönliche Angriffe sind verboten.</p></div></article>
+<article class="rule"><div class="rule-num">02</div><div><h3>Kein Spam</h3><p>Vermeide Nachrichten-Spam, übermäßige Markierungen und unnötige Wiederholungen.</p></div></article>
+<article class="rule"><div class="rule-num">03</div><div><h3>Keine Werbung</h3><p>Werbung für andere Discord-Server, Spiele oder Projekte ist ohne Erlaubnis der Teamleitung nicht gestattet.</p></div></article>
+<article class="rule"><div class="rule-num">04</div><div><h3>Keine unangemessenen Inhalte</h3><p>Verboten sind pornografische, extrem gewalttätige, diskriminierende oder andere unangemessene Inhalte.</p></div></article>
+<article class="rule"><div class="rule-num">05</div><div><h3>Kein Trolling</h3><p>Absichtliches Stören, Provozieren oder Sabotieren der Community wird nicht toleriert.</p></div></article>
+<article class="rule"><div class="rule-num">06</div><div><h3>Anweisungen des Teams</h3><p>Folge den berechtigten Anweisungen des Teams. Bei Problemen kannst du dich respektvoll an die Moderation wenden.</p></div></article>
+<article class="rule"><div class="rule-num">07</div><div><h3>Privatsphäre schützen</h3><p>Veröffentliche keine privaten Daten, persönlichen Nachrichten oder Bilder anderer Personen ohne deren Zustimmung.</p></div></article>
+<article class="rule"><div class="rule-num">08</div><div><h3>Keine Cheats oder Exploits</h3><p>Das Verbreiten von Cheats, Exploits oder schädlichen Links ist verboten.</p></div></article>
+<article class="rule"><div class="rule-num">09</div><div><h3>Richtige Kanäle verwenden</h3><p>Schreibe deine Nachrichten in die dafür vorgesehenen Kanäle und halte dich an deren Themen.</p></div></article>
+<article class="rule"><div class="rule-num">10</div><div><h3>Konsequenzen</h3><p>Bei Regelverstößen kann das Team Verwarnungen, zeitweise Ausschlüsse oder einen permanenten Bann aussprechen.</p></div></article>
+<article class="rule"><div class="rule-num">11</div><div><h3>Gemeinsam Spaß haben</h3><p>Unterstütze eine freundliche Community und hilf dabei, Niedersachsen Roleplay zu einem angenehmen Ort für alle zu machen.</p></div></article>
+</div>
+<div class="closing">✓ Mit deiner Teilnahme an der Community akzeptierst du diese Regeln.<br><br>Niedersachsen Roleplay – Gemeinsam Niedersachsen erleben! 🚔</div>
+</div></section>
+
+<section class="section white" id="neuigkeiten"><div class="wrap"><div class="section-head"><div class="kicker">Auf dem Laufenden bleiben</div><h2>Neuigkeiten & Updates</h2><p>Hier erscheinen künftig neue Inhalte, Verbesserungen und wichtige Ankündigungen rund um das Projekt.</p></div>
+<div class="news"><article><small>Projektinformation</small><h3>Willkommen bei Niedersachsen Roleplay</h3><p>Auf dieser Website findest du die wichtigsten Informationen rund um unser Projekt und die Spielwelt Celle.</p></article><article><small>Weitere Updates folgen</small><h3>Neuigkeiten werden hier ergänzt</h3><p>Schau regelmäßig vorbei oder besuche unseren Discord-Server für aktuelle Informationen.</p></article></div></div></section>
+
+<section class="section" id="faq"><div class="wrap faq"><div class="section-head"><div class="kicker">Häufige Fragen</div><h2>FAQ</h2></div>
+<details><summary>Was ist Niedersachsen Roleplay?</summary><p>Niedersachsen Roleplay ist ein Roblox-Roleplay-Projekt mit der Stadt Celle als zentralem Schauplatz.</p></details>
+<details><summary>Wo finde ich Neuigkeiten?</summary><p>Neuigkeiten werden auf dieser Website und im offiziellen Discord-Server veröffentlicht.</p></details>
+<details><summary>Wie kann ich dem Discord beitreten?</summary><p>Nutze den Discord-Button auf dieser Website oder den Einladungslink discord.gg/FNm3RCJeDu.</p></details>
+<details><summary>Wie komme ich zum Roblox-Spiel?</summary><p>Ein direkter Link zum Roblox-Spiel wird ergänzt, sobald die endgültige Spieladresse eingetragen ist.</p></details>
+</div></section>
+
+<section class="section"><div class="wrap contact" id="kontakt"><div><div class="kicker" style="color:#ff8589">Kontakt & Community</div><h2>Werde Teil der Community.</h2><p>Fragen oder Rückmeldungen zum Projekt? Über unseren Discord-Server bleibst du mit der Community verbunden.</p></div><a class="btn btn-red" href="https://discord.gg/FNm3RCJeDu" target="_blank" rel="noopener">Discord öffnen ↗</a></div></section>
+</main>
+<footer><div class="wrap footer-row"><div><strong>NIEDERSACHSEN ROLEPLAY</strong><br>Ein Roblox-Roleplay-Projekt mit Bezug zu Celle.</div><div>Diese Website ist eine Projektwebsite und steht nicht in Verbindung mit Behörden der Stadt Celle oder des Landes Niedersachsen. Roblox ist eine Marke der Roblox Corporation.</div><div>© <span id="year"></span> Niedersachsen Roleplay</div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕ Schließen':'☰ Menü';});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰ Menü';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
